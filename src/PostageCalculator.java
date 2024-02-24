@@ -15,9 +15,9 @@ public class PostageCalculator {
         }
         String zip1 = String.valueOf(zp1);
         String zip2 = String.valueOf(zp2);
-        int countryCode1 = Integer.parseInt(zip1.substring(0,3));
-        int countryCode2 = Integer.parseInt(zip2.substring(0, 3));
-        finalCost += (double) (Math.abs(countryCode1 - countryCode2)) /100;
+        int countyCode1 = Integer.parseInt(zip1.substring(0,3));
+        int countyCode2 = Integer.parseInt(zip2.substring(0, 3));
+        finalCost += (double) (Math.abs(countyCode1 - countyCode2)) /100;
         if (l+w+h > 36) {
             finalCost += ((l+w+h) - 36) * 0.1;
         }
@@ -37,9 +37,9 @@ public class PostageCalculator {
         }
         String zip1 = String.valueOf(p.getOrigin().getZipcode());
         String zip2 = String.valueOf(p.getDestination().getZipcode());
-        int countryCode1 = Integer.parseInt(zip1.substring(0,3));
-        int countryCode2 = Integer.parseInt(zip2.substring(0,3));
-        finalCost += (double) (Math.abs(countryCode1 - countryCode2)) /100;
+        int countyCode1 = Integer.parseInt(zip1.substring(0,3));
+        int countyCode2 = Integer.parseInt(zip2.substring(0,3));
+        finalCost += (double) (Math.abs(countyCode1 - countyCode2)) /100;
         if (l+w+h > 36) {
             finalCost += ((l+w+h) - 36) * 0.1;
         }
@@ -58,9 +58,9 @@ public class PostageCalculator {
         }
         String zip1 = String.valueOf(p.getOrigin().getZipcode());
         String zip2 = String.valueOf(p.getDestination().getZipcode());
-        int countryCode1 = Integer.parseInt(zip1.substring(0,3));
-        int countryCode2 = Integer.parseInt(zip2.substring(0,3));
-        finalCost += (double) (Math.abs(countryCode1 - countryCode2)) /100;
+        int countyCode1 = Integer.parseInt(zip1.substring(0,3));
+        int countyCode2 = Integer.parseInt(zip2.substring(0,3));
+        finalCost += (double) (Math.abs(countyCode1 - countyCode2)) /100;
         if (p.getLength()+p.getWidth()+p.getHeight() > 36) {
             finalCost += ((p.getLength()+p.getWidth()+p.getHeight()) - 36) * 0.1;
         }

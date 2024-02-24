@@ -34,6 +34,24 @@ public class PackageSimulator {
                     "Width: " + p.getWidth() + " inches\n" +
                     "Cost: " + PostageCalculator.calculatePostage(p) + "\n";
         }
+        s += "\nTOTAL COST: " + generateTotalCost();
         return s;
+    }
+
+    public static String getCalculationInfo() {
+        String info =
+                "\nPackages are calculated in 3 different ways:" +
+                "1. Distance between origin and destination\n" +
+                "2. Size of package\n" +
+                "3. Weight of package\n" +
+                "The delivery comes with a base cost of $3.75.\n" +
+                "The price for distance come from the difference in country codes(first 3 numbers in zip code) divided by 100.\n" +
+                "The package gets charged extra if its dimensions combined exceeds 36 inches. It will be charged 10 cents per inch above 36.\n" +
+                "The package gets charged 50 cents for each pound up to 40 pounds. Packages will be charged 1 dollar per pound over the 40 limit.\n";
+        return info;
+    }
+
+    public void resetSimulation() {
+        packages.clear();
     }
 }

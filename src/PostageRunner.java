@@ -36,14 +36,7 @@ public class PostageRunner {
                 System.out.println(simulator.getSimulationInfo());
             }
             else if (input.equals("3")) {
-                System.out.println("\nPackages are calculated in 3 different ways:" +
-                        "1. Distance between origin and destination\n" +
-                        "2. Size of package\n" +
-                        "3. Weight of package");
-                System.out.println("The delivery comes with a base cost of $3.75.");
-                System.out.println("The price for distance come from the difference in country codes(first 3 numbers in zip code) divided by 100.");
-                System.out.println("The package gets charged extra if its dimensions combined exceeds 36 inches. It will be charged 10 cents per inch above 36.");
-                System.out.println("The package gets charged 50 cents for each pound up to 40 pounds. Packages will be charged 1 dollar per pound over the 40 limit.\n");
+                System.out.println(PackageSimulator.getCalculationInfo());
             } else if (!input.equals("4")) {
                 System.out.println("Please choose an available option(use numbers to choose).\n");
             }
